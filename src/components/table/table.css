@@ -1,0 +1,6 @@
+table, th, td {
+    border: 1px solid black
+}
+.driverName, .driverPhone, .driverEmail {
+    text-align: left
+}

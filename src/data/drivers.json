@@ -1,0 +1,63 @@
+{
+    "drivers": [{
+        "id": 1,
+        "name": "John Doe",
+        "phone": "+62888888888",
+        "email": "john@mail.com",
+        "suspended": 0
+    }, {
+        "id": 2,
+        "name": "Jane Doe",
+        "phone": "+62888888887",
+        "email": "jane@mail.com",
+        "suspended": 1
+    }, {
+        "id": 3,
+        "name": "Oemar Bakrie",
+        "phone": "+62888888886",
+        "email": "oemar@mail.com",
+        "suspended": 0 
+    }, {
+        "id": 4,
+        "name": "Johnny English",
+        "phone": "+62888888885",
+        "email": "johnny@mail.com",
+        "suspended": 1 
+    }, {
+        "id": 5,
+        "name": "Ethan Hunt",
+        "phone": "+62888888884",
+        "email": "ethan@mail.com",
+        "suspended": 0 
+    }, {
+        "id": 6,
+        "name": "Jaja Miharja",
+        "phone": "+62888888883",
+        "email": "jaja@mail.com",
+        "suspended": 0 
+    }, {
+        "id": 7,
+        "name": "Rafael Benitez",
+        "phone": "+62888888882",
+        "email": "rafael@mail.com",
+        "suspended": 0 
+    }, {
+        "id": 8,
+        "name": "Chris Martin",
+        "phone": "+62888888881",
+        "email": "chris@mail.com",
+        "suspended": 0 
+    }, {
+        "id": 9,
+        "name": "Bon Jovi",
+        "phone": "+62888888880",
+        "email": "bon@mail.com",
+        "suspended": 0 
+    }, {
+        "id": 10,
+        "name": "Iwan Fals",
+        "phone": "+62888888879",
+        "email": "iwan@mail.com",
+        "suspended": 1 
+    }]
+}
