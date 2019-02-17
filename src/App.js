@@ -8,9 +8,8 @@ import { Provider } from 'react-redux'
 import store from './store'
 
 // components
-import Header from './components/header/header.jsx';
-import Search from './components/search/search.jsx'
-import Table from './components/table/table.jsx';
+import Header from './container/header/header.jsx';
+import Table from './container/table/table.jsx';
 
 
 class App extends Component {
@@ -19,7 +18,6 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Header />
-          <Search />
           <Table />
         </div>
       </Provider>

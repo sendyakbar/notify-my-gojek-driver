@@ -10,14 +10,23 @@ import { connect } from 'react-redux';
 import driversList from '../../action/fetchDriver';
 
 // components
-import Modal from '../modal/modal.jsx';
+import Modal from '../../components/modal/modal.jsx';
+import Button from '../../components/button/button.jsx';
 
 class Table extends Component {
+    state = {
+        driverName: '',
+        modalTitle: ''
+    }
     componentDidMount() {
         this.props.driversList();
     };
 
-    openModal = () => {
+    openModal = (title, name) => {
+        this.setState({
+            modalTitle: title,
+            driverName: name
+        })
         const modal = document.getElementById('myModal')
         modal.style.display = 'block'
     };
@@ -43,19 +52,27 @@ class Table extends Component {
                             .map((datum, index) => (
                                 <tr key={index}>
                                     <td>{datum.id}</td>
-                                    <td className="driverName">{datum.name}</td>
-                                    <td className="driverPhone">{datum.phone}</td>
-                                    <td className="driverEmail">{datum.email}</td>
-                                    <td>{datum.suspended === 0 ? 'NO' : 'YES'}</td>
+                                    <td className="driverName">{ datum.name }</td>
+                                    <td className="driverPhone">{ datum.phone }</td>
+                                    <td className="driverEmail">{ datum.email }</td>
+                                    <td>{ datum.suspended === 0 ? 'NO' : 'YES' }</td>
                                     <td>
-                                        {datum.suspended === 0 ? <button onClick={this.openModal}>Notify</button> : null}
+                                        { datum.suspended === 0 
+                                            ? <Button 
+                                                label="Notify"
+                                                action={ () => this.openModal("Notify", datum.name) }
+                                              /> 
+                                              : null }
                                     </td>
                                 </tr>
                             ))
                         }
                     </tbody>
                 </table>
-                <Modal />
+                <Modal 
+                    title={ this.state.modalTitle }
+                    name={ this.state.driverName }
+                />
             </div>
         );
     }
