@@ -10,7 +10,13 @@ class Button extends Component {
     render() { 
         return (
             <div>
-                <button onClick={ this.onClick }>{ this.props.label }</button>
+                <button
+                    className="button"
+                    onClick={ this.onClick }
+                    style={{ backgroundColor: this.props.color }}
+                >
+                    { this.props.label }
+                </button>
             </div>
         );
     }

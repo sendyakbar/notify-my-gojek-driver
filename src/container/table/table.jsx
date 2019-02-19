@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import driversList from '../../action/fetchDriver';
 
 // components
-import Modal from '../../components/modal/modal.jsx';
+import Modal from '../modal/modal.jsx';
 import Button from '../../components/button/button.jsx';
 
 class Table extends Component {
@@ -33,7 +33,7 @@ class Table extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <table>
                     <thead>
                         <tr>
@@ -47,8 +47,8 @@ class Table extends Component {
                     </thead>
                     <tbody>
                         {this.props.allDrivers
-                            .filter(d => RegExp(this.props.searchText, 'gi')
-                            .test(d.name))
+                            .filter(datum => RegExp(this.props.searchText, 'gi')
+                            .test(datum.name))
                             .map((datum, index) => (
                                 <tr key={index}>
                                     <td>{datum.id}</td>
@@ -60,9 +60,11 @@ class Table extends Component {
                                         { datum.suspended === 0 
                                             ? <Button 
                                                 label="Notify"
+                                                color="grey"
                                                 action={ () => this.openModal("Notify", datum.name) }
                                               /> 
-                                              : null }
+                                                : null
+                                        }
                                     </td>
                                 </tr>
                             ))

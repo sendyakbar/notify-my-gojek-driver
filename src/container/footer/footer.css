@@ -1,0 +1,15 @@
+.foot-note {
+    pointer-events: none;
+    font-size: 20px
+  }
+    
+  .App-footer {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding: 2vh 40vh
+  }

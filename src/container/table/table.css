@@ -1,9 +1,22 @@
-table {
-    margin-top: 3vh
+.container {
+    padding: 0 40vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center
 }
-table, th, td {
-    border: 1px solid black
+table {
+    margin-top: 3vh;
+    width: 70%
+}
+th {
+    background-color: #7BC415;
+    color: white;
+    height: 40px
+}
+td {
+    height: 30px;
 }
 .driverName, .driverPhone, .driverEmail {
-    text-align: left
+    text-align: left;
+    padding-left: 30px
 }

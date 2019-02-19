@@ -10,6 +10,7 @@ import store from './store'
 // components
 import Header from './container/header/header.jsx';
 import Table from './container/table/table.jsx';
+import Footer from './container/footer/footer.jsx';
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <Table />
+          <Footer />
         </div>
       </Provider>
     );

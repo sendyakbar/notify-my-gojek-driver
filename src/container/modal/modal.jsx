@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 // style
-import './modal.css'
+import './modal.css';
 
 // components
-import Button from '../button/button.jsx'
-import TextArea from '../textArea/textArea.jsx'
+import Button from '../../components/button/button.jsx';
+import TextArea from '../../components/textArea/textArea.jsx';
 
 class Modal extends Component {
     state = {
@@ -27,21 +27,25 @@ class Modal extends Component {
         return (
             <div id="myModal" className="modal">
                 <div className="modal-content">
-                    <span className="close" onClick={this.closeModal}>&times;</span>
                     <p> { this.props.title } { this.props.name }</p>
                     <TextArea
                         placeholder="Message"
                         onChange={ this.messageInput }
                         value={ this.state.message }
                     />
-                    <Button
-                        label="Send"
-                        action={ this.onSubmit }
-                    />
-                    <Button 
-                        label="Cancel"
-                        action={ this.closeModal }
-                    />
+                    <div className="buttonContainer">
+                        <Button
+                            className="button"
+                            label="Send"
+                            color="#7BC415"
+                            action={ this.onSubmit }
+                        />
+                        <Button
+                            label="Cancel"
+                            color="#DC6969"
+                            action={ this.closeModal }
+                        />
+                    </div>
                 </div>
             </div>
         );
