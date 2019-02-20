@@ -49,6 +49,10 @@ In this project, my extra works are:
 
 In the project directory, you can run:
 
+### `npm install`
+
+To install all dependencies in this project.
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
