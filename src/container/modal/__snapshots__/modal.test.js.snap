@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal> component renders correctly and matched snapshot 1`] = `
+<div
+  className="modal"
+  id="myModal"
+>
+  <div
+    className="modal-content"
+  >
+    <p>
+       
+       
+    </p>
+    <div>
+      <textarea
+        onChange={[Function]}
+        placeholder="Message"
+        value=""
+      />
+    </div>
+    <div
+      className="buttonContainer"
+    >
+      <div>
+        <button
+          className="button"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#7BC415",
+            }
+          }
+        >
+          Send
+        </button>
+      </div>
+      <div>
+        <button
+          className="button"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#DC6969",
+            }
+          }
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

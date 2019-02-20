@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConnectedHeader> redux-connected component renders correctly and matched snapshot 1`] = `
+<header
+  className="App-header"
+>
+  <img
+    alt="logo"
+    className="App-logo"
+    src="https://imgee.s3.amazonaws.com/imgee/638b26370a794db38dfef92fa2bfe60f.png"
+  />
+  <div>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        onChange={[Function]}
+        placeholder="Type driver name..."
+        type="text"
+        value=""
+      />
+    </form>
+  </div>
+</header>
+`;

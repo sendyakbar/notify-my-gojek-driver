@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button> component renders correctly and matched snapshot 1`] = `
+<div>
+  <button
+    className="button"
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+  />
+</div>
+`;

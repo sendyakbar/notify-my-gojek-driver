@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 // redux
-import { Provider } from 'react-redux'
-import store from './store'
+import { Provider } from 'react-redux';
+import store from './store';
 
 // components
 import Header from './container/header/header.jsx';

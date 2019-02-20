@@ -1,9 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
+
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('<App> component', () => {
+  const wrapper = shallow(<App />)
+  test('renders correctly', () => {
+    expect(wrapper).toHaveLength(1)
+  })
+  test('it has a Provider', () => {
+    const wrapperProvider = wrapper.find('Provider')
+    expect(wrapperProvider).toHaveLength(1)
+  })
+  test('it has a div', () => {
+    const wrapperDiv = wrapper.find('div')
+    expect(wrapperDiv).toHaveLength(1)
+  })
+  test('it renders correctly and matched snapshot', () => {
+    const tree = renderer.create(<App />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})
